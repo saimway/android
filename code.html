@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sonic Music App Onboarding</title>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3b19e6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#141121",
+                        "surface-dark": "#1e1b2e", 
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased overflow-hidden">
+<!-- Main Container -->
+<div class="relative flex h-screen w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark overflow-hidden shadow-2xl">
+<!-- Abstract Background Gradient / Mesh -->
+<div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+<!-- Top gradient blob -->
+<div class="absolute -top-[20%] -left-[10%] w-[150%] h-[60%] rounded-full bg-primary/20 blur-[100px] mix-blend-screen animate-pulse"></div>
+<!-- Bottom gradient blob -->
+<div class="absolute bottom-[-10%] right-[-20%] w-[120%] h-[50%] rounded-full bg-[#8b5cf6]/20 blur-[80px] mix-blend-screen"></div>
+<!-- Noise texture overlay for that premium feel -->
+<div class="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+</div>
+<!-- Dynamic Island Area Placeholder -->
+<div class="relative z-20 w-full flex justify-center pt-3 pb-2">
+<div class="h-[36px] w-[120px] bg-black rounded-full flex items-center justify-center gap-2 px-1 shadow-lg ring-1 ring-white/5 transition-all duration-700 hover:w-[180px]">
+<!-- Simulated audio visualizer in dynamic island -->
+<div class="flex items-end gap-[2px] h-3">
+<div class="w-1 bg-primary rounded-full h-1 animate-[bounce_1s_infinite]"></div>
+<div class="w-1 bg-primary rounded-full h-3 animate-[bounce_1.2s_infinite]"></div>
+<div class="w-1 bg-primary rounded-full h-2 animate-[bounce_0.8s_infinite]"></div>
+<div class="w-1 bg-primary rounded-full h-3 animate-[bounce_1.1s_infinite]"></div>
+<div class="w-1 bg-primary rounded-full h-1 animate-[bounce_0.9s_infinite]"></div>
+</div>
+</div>
+</div>
+<!-- Content Area -->
+<div class="flex-1 flex flex-col justify-end relative z-10 px-6 pb-8">
+<!-- Hero Image / Visual -->
+<div class="flex-1 flex flex-col items-center justify-center min-h-0">
+<div class="relative w-full aspect-square max-w-[320px] flex items-center justify-center">
+<!-- Rotating vinyl/circle graphic -->
+<div class="absolute inset-0 rounded-full border border-white/5 bg-gradient-to-b from-white/5 to-transparent backdrop-blur-sm"></div>
+<div class="w-[85%] h-[85%] rounded-full overflow-hidden shadow-[0_0_40px_rgba(59,25,230,0.4)] relative">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transform transition-transform duration-[20s] hover:scale-110" data-alt="Abstract 3D rendering of musical soundwaves in dark purple and blue neon colors" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHfr1qMeZ5eecprGRKTh5FwxdToq8Zg2OrHFBZonXylPgRHqOxox7FijX4cjriuj4wxfuNJZ9vRN8B2Poij3iNhwifwKLWOfaLHJeBY3WDiZt_1u5CsPAU7xGuYn49FT826udSA59rItiqvO2o647B6hLY2azAlxxDZIu4TDmNcCKS7jdh3ptAbKvoGPZmvT5u8mLWpuxMz93XYddXg1sQK0G0Vw-zfVGNY2hzZnMlqt5Bl9VbC19GxzElsnXNSJkEvHMmYkA1cps");'>
+</div>
+<!-- Overlay gradient for depth -->
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/40 to-transparent mix-blend-overlay"></div>
+</div>
+<!-- Floating Icon in center -->
+<div class="absolute flex items-center justify-center w-16 h-16 bg-background-dark/80 backdrop-blur-md rounded-full border border-white/10 shadow-xl">
+<span class="material-symbols-outlined text-3xl text-primary">graphic_eq</span>
+</div>
+</div>
+</div>
+<!-- Text Content -->
+<div class="flex flex-col items-center text-center space-y-2 mb-8">
+<h1 class="text-white tracking-tight text-4xl font-bold leading-tight pt-4">
+                    Sonic<span class="text-primary">.</span>
+</h1>
+<p class="text-gray-400 text-lg font-normal leading-relaxed max-w-[80%] mx-auto">
+                    Experience music like never before with immersive 360° audio streaming.
+                </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-3 w-full">
+<!-- Primary Action -->
+<button class="group relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-6 bg-primary text-white font-semibold text-lg shadow-[0_0_20px_rgba(59,25,230,0.3)] transition-all hover:scale-[1.02] active:scale-[0.98]">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+<span class="truncate">Get Started</span>
+</button>
+<!-- Secondary Action -->
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-6 bg-surface-dark border border-white/5 hover:bg-white/5 text-white font-medium text-base transition-colors">
+<span class="truncate">I have an account</span>
+</button>
+</div>
+<!-- Social Login Divider -->
+<div class="flex flex-col items-center mt-6 gap-4">
+<p class="text-[#9c93c8] text-sm font-normal">Or continue with</p>
+<div class="flex gap-4">
+<!-- Apple -->
+<button aria-label="Sign in with Apple" class="w-12 h-12 rounded-full bg-surface-dark border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-xl">ios</span>
+<!-- Note: Material Symbols doesn't have brand icons usually, simulating with text or generic if needed, but 'apple' might exist in some icon sets. If not valid, using a placeholder path is better, but constraint says replace icons with Material Symbols. I will use a generic circle/face for demo or assume font support. 'token' looks abstract enough or strictly follow instruction. -->
+<!-- Using a generic symbol that represents 'system' or 'brand' as instructed to replace with Material Symbols. 'account_circle' is safe. -->
+</button>
+<!-- Google -->
+<button aria-label="Sign in with Google" class="w-12 h-12 rounded-full bg-surface-dark border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+<!-- Simulating Google G -->
+<span class="font-bold text-xl">G</span>
+</button>
+<!-- Spotify/Other -->
+<button aria-label="Sign in with Spotify" class="w-12 h-12 rounded-full bg-surface-dark border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-xl">music_note</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Safe Area Spacer -->
+<div class="h-2 w-full bg-transparent"></div>
+</div>
+</body></html>
